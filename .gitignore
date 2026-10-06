@@ -1,6 +1,8 @@
 # Editor directories and files 
 .vscode/ 
-.idea/ 
+.idea/
+*.swp
+
 *.suo 
 *.ntvs* 
 *.njsproj 
@@ -10,3 +12,4 @@ Thumbs.db
 desktop.ini 
 # Log files 
 *.log 
+.cache/

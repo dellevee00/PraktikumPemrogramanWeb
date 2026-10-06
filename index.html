@@ -76,60 +76,61 @@
                 </tbody>
             </table>
         </section>
-        <hr>
-        <section id="form-tambah">
-            <h2>Tambah Mahasiswa Baru</h2>
-            <p>Isi form berikut untuk menambahkan mahasiswa baru.</p>
-            <form action="#" method="POST">
-                <fieldset>
-                    <legend>
-                        <p>
-                            <label for="npm">Nomor Pokok Mahasiswa(NPM)</label>
-                            <br>
-                            <input type="text" id="npm" name="npm" placeholder="Contoh : 2415061033" required pattern="[0-9]{8,12}">
-                            <br>
-                            <small>isi npm dengan benar</small>
-                        </p>
-                        <p>
-                            <label for="nama">Nama Lengkap:</label>
-                            <br>
-                            <input type="text" id="nama" name="nama" placeholder="Contoh : Delvina Nur" required minlength="3" maxlength="100">
-                            <br>
-                            <small>isi nama dengan benar</small>
-                        </p>
-                        <p>
-                            <label for="program_studi">Program Studi:</label>
-                            <br>
-                            <select id="program_studi" name="program_studi" required>
-                                <option>Pilih Program Studi</option>
-                                <option>Teknik Informatika</option>
-                            </select>
-                            <br>
-                            <small>isi program studi dengan benar</small>
-                        </p>
-                        <p>
-                            <label for="angkatan">Tahun Angkatan:</label>
-                            <br>
-                            <input type="number" id="angkatan" name="angkatan" placeholder="Contoh : 2024" required min="2018" max="2026">
-                            <br>
-                            <small>isi angkatan dengan benar</small>
-                        </p>
-                        <p>
-                            <label for="email">Alamat Email:</label>
-                            <br>
-                            <input type="email" id="email" name="email" placeholder="Contoh : email@example.com" required>
-                            <br>
-                            <small>isi email dengan benar</small>
-                        </p>
-                        <p>
-                            <button type="submit">Simpan Data Mahasiswa</button>
-                            <button type="reset">Reset Formulir</button>
-                        </p>
-                    </legend>
-                </fieldset>
-            </form>
-        </section>
-    </main>
-    
-</body>
-</html>
+       <hr>
+<section id="form-tambah">
+    <h2>Tambah Mahasiswa Baru</h2>
+    <p>Isi form berikut untuk menambahkan mahasiswa baru.</p>
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>Data Mahasiswa Baru</legend>
+
+            <p>
+                <label for="npm">Nomor Pokok Mahasiswa(NPM)</label>
+                <br>
+                <input type="text" id="npm" name="npm" placeholder="Contoh : 2415061033" required pattern="[0-9]{8,12}">
+                <br>
+                <small>isi npm dengan benar</small>
+            </p>
+
+            <p>
+                <label for="nama">Nama Lengkap:</label>
+                <br>
+                <input type="text" id="nama" name="nama" placeholder="Contoh : Delvina Nur" required minlength="3" maxlength="100">
+                <br>
+                <small>isi nama dengan benar</small>
+            </p>
+
+            <p>
+                <label for="program_studi">Program Studi:</label>
+                <br>
+                <select id="program_studi" name="program_studi" required>
+                    <option value="">Pilih Program Studi</option>
+                    <option value="Teknik Informatika">Teknik Informatika</option>
+                </select>
+                <br>
+                <small>isi program studi dengan benar</small>
+            </p>
+
+            <p>
+                <label for="angkatan">Tahun Angkatan:</label>
+                <br>
+                <input type="number" id="angkatan" name="angkatan" placeholder="Contoh : 2024" required min="2018" max="2026">
+                <br>
+                <small>isi angkatan dengan benar</small>
+            </p>
+
+            <p>
+                <label for="email">Alamat Email:</label>
+                <br>
+                <input type="email" id="email" name="email" placeholder="Contoh : email@example.com" required>
+                <br>
+                <small>isi email dengan benar</small>
+            </p>
+
+            <p>
+                <button type="submit">Simpan Data Mahasiswa</button>
+                <button type="reset">Reset Formulir</button>
+            </p>
+        </fieldset>
+    </form>
+</section>
