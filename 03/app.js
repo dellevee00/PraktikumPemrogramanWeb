@@ -158,29 +158,42 @@ function validateForm(npm, nama, prodi, angkatan, email) {
 if (formTambah) {
     formTambah.addEventListener("submit", function (event) {
         // Percobaan 3-4 Langkah 4
+        event.preventDefault();
 
         // Percobaan 3-4 Langkah 5
 
-        const npm = ""
-        const nama = ""
-        const prodi =  ""
-        const angkatan = ""
-        const email = ""
+        const npm = inputNpm.value.trim();
+        const nama = inputNama.value.trim();
+        const prodi = selectProdi.value;
+        const angkatan = inputAngkatan.value.trim();
+        const email = inputEmail.value.trim();
 
-        const validation = ""
+        const validation = validateForm(npm, nama, prodi, angkatan, email);
         
         
 
         if (!validation.isValid) {
             // Percobaan 3-4 Langkah 6
+            showAlert(validation.message, "danger");
+            return;
             
         }
 
         // Percobaan 3-4 Langkah 7
-
+        const mahasiswaBaru = {
+            npm,
+            nama,
+            program_studi: prodi,
+            angkatan: parseInt(angkatan, 10),
+            email
+        };
 
 
         // Percobaan 3-4 Langkah 8
+        dataMahasiswa.push(mahasiswaBaru);
+        renderTable(dataMahasiswa);
+        formTambah.reset();
+        showAlert(`Data mahasiswa ${nama} (${npm}) berhasil ditambahkan ke sistem!`, "success");
         
     });
 }
@@ -189,13 +202,29 @@ if (formTambah) {
 // 8. Event Handling Hapus Data Mahasiswa (Percobaan 3-5).
 
 function hapusMahasiswa(npm) {
+    const mhs = dataMahasiswa.find(item => item.npm === npm);
+    if (!mhs) terurn;
 
+    const konfirmasi = confirm(`Apakah anda yakin ingin menghapus data mahasiswa:\n${mhs.nama} (${nim}?`);
+    if(konfirmasi) {
+        dataMahasiswa = dataMahasiswa.filter(item => item.nim !==nim);
+        renderTable(dataMahasiswa);
+        showAlert(`Data mahasiswa dengan NIM ${nim} berhasil dihapus dari sistem.`, "info");
+    }
 }
 
 
 // 9. Fitur Pencarian Langsung Real-Time / Live Search (Percobaan 3-5)
 
 if (inputSearch) {
+    inputSearch.addEventListener("input", function() {
+        const keyword = inputSearch.value.trim().toLowerCase();
+        if (keyword === "") {
+            renderTable(dataMahasiswa);
+        } else {
+            const hasilFilter = dataMahasiswa.filter(mhs => mhs.nim.toLowerCase().)
+        }
+    })
     
 }
 
